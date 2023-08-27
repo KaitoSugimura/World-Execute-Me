@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/World-Execute-Me/static/css/main.e63d7645.css",
-    "main.js": "/World-Execute-Me/static/js/main.1fdf4b36.js",
+    "main.js": "/World-Execute-Me/static/js/main.189b65af.js",
     "static/media/Helixa-Light.ttf": "/World-Execute-Me/static/media/Helixa-Light.7f4bfd1a65c2156a35be.ttf",
     "static/media/Helixa-Light.otf": "/World-Execute-Me/static/media/Helixa-Light.5b6cfaab4584d28275d7.otf",
     "index.html": "/World-Execute-Me/index.html",
     "main.e63d7645.css.map": "/World-Execute-Me/static/css/main.e63d7645.css.map",
-    "main.1fdf4b36.js.map": "/World-Execute-Me/static/js/main.1fdf4b36.js.map"
+    "main.189b65af.js.map": "/World-Execute-Me/static/js/main.189b65af.js.map"
   },
   "entrypoints": [
     "static/css/main.e63d7645.css",
-    "static/js/main.1fdf4b36.js"
+    "static/js/main.189b65af.js"
   ]
 }
