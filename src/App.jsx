@@ -1,16 +1,16 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Lyrics from "./Data/Lyrics";
 import "./App.css";
+import music from "/executeMe.mp3";
 
 let index = 0;
 let startTime = 0;
 
 function App() {
-  // const audioRef = useRef(null);
   const [load, setLoad] = useState(false);
   const [started, setStarted] = useState(false);
   const [text, setText] = useState("");
-  const [audio, setAudio] = useState(new Audio("/executeMe.mp3"));
+  const [audio, setAudio] = useState(new Audio(music));
 
   useEffect(() => {
     setTimeout(() => {
@@ -20,13 +20,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <audio
-        ref={audioRef}
-        src="/executeMe.mp3"
-        onLoad={() => {
-          setLoad(true);
-        }}
-      /> */}
       {!started ? (
         !load ? (
           <div className="btn">
@@ -47,7 +40,6 @@ function App() {
                 const MS = +t[0] * 60000 + +t[1] * 1000 + +t[2] * 10;
 
                 const timeSinceLast = Date.now() - startTime;
-                console.log(timeSinceLast, MS);
                 if (timeSinceLast >= MS) {
                   setText(Lyrics[index][1]);
                   index++;
