@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Lyrics from "./Data/Lyrics";
 import "./App.css";
-import music from "/executeMe.mp3";
 
 let index = 0;
 let startTime = 0;
@@ -10,7 +9,9 @@ function App() {
   const [load, setLoad] = useState(false);
   const [started, setStarted] = useState(false);
   const [text, setText] = useState("");
-  const [audio, setAudio] = useState(new Audio(music));
+  const [audio, setAudio] = useState(
+    new Audio(process.env.PUBLIC_URL + "/execute.mp3")
+  );
 
   useEffect(() => {
     setTimeout(() => {
@@ -40,6 +41,7 @@ function App() {
                 const MS = +t[0] * 60000 + +t[1] * 1000 + +t[2] * 10;
 
                 const timeSinceLast = Date.now() - startTime;
+                console.log(timeSinceLast, MS);
                 if (timeSinceLast >= MS) {
                   setText(Lyrics[index][1]);
                   index++;
